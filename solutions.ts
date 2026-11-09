@@ -1,11 +1,6 @@
-
-
 function multiplyValue(value: number, multiplier: number = 2) : number{
 return value * multiplier
 }
-
-
-
 
 
 
@@ -40,6 +35,8 @@ combinedArray.push(...array)
 return combinedArray
 }
 
+
+
 interface Course {
     title :string;
     students : number;
@@ -51,12 +48,7 @@ function getPopularCourses ( courses: Course[], minStudents: number) : Course[] 
         course.isPublished === true && course.students >= minStudents
     )
 }
-const courses = [
-    { title: "TypeScript Mastery", students: 120, isPublished: true },
-    { title: "Draft Course", students: 200, isPublished: false },
-    { title: "Basic HTML", students: 45, isPublished: true },
-    { title: "Next.js Pro", students: 85, isPublished: true }
-];
+
 
 
 
@@ -64,26 +56,28 @@ const courses = [
 function pluckValues <T, K extends keyof T>(items: T[], key: K ): T[K][]  {
     return items.map((item: T): T[K] => item[key])
 }
-const users = [
-    { id: 1, name: "Rakib", role: "Admin" },
-    { id: 2, name: "Sadia", role: "Editor" },
-    { id: 3, name: "Tariq", role: "Subscriber" }
-];
+
 
 
 
 
 
 class Employee {
-    constructor(protected name: string,  private baseSalary: number ) {
-    }
-    getDetails(){
+    constructor(
+        protected name: string,
+        private baseSalary: number
+    ) {}
+
+    getDetails(): string{
         return `Employee: ${this.name}, Base Salary: ${this.baseSalary}`
     }
 }
 
 class Manager extends Employee{
-constructor(name: string, baseSalary: number, private department: string ) {
+constructor(
+    name: string,
+    baseSalary: number,
+    private department: string ) {
     super(name, baseSalary);
 }
     getRoleInfo(): string{
@@ -91,32 +85,18 @@ constructor(name: string, baseSalary: number, private department: string ) {
     }
 }
 
-const manager = new Manager("Alice", 50000, "Engineering");
 
-
-
-
-
-async function validateAgeAsync (age: number) : Promise<string> {
-    if ( age < 18) {
-        throw new Error("Access Denied: Must be 18 or older")
+const validateAgeAsync = async (age: number): Promise<string> => {
+    if (age < 18) {
+        throw new Error("Access Denied: Must be 18 or older");
     }
-    await new Promise<void>( resolve => {
-        setTimeout( ()=> {resolve()},1000)
-    })
-    return "Access Granted"
-}
-
-
-const runValidation = async (): Promise<void> => {
-    try {
-        const result: string = await validateAgeAsync(20);
-        console.log(result);
-    } catch (error: unknown) {
-        if (error instanceof Error) {
-            console.log(error.message);
-        }
-    }
+    await new Promise<void>(resolve => {
+        setTimeout(() => {
+            resolve();
+        }, 1000);
+    });
+    return "Access Granted";
 };
 
-void runValidation();
+
+
