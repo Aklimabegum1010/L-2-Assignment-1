@@ -44,7 +44,7 @@ interface Course {
 }
 
 function getPopularCourses ( courses: Course[], minStudents: number) : Course[] {
-    return courses.filter((course : Course )=>
+    return courses.filter((course : Course ): boolean =>
         course.isPublished === true && course.students >= minStudents
     )
 }
