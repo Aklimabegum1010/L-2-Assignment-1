@@ -22,16 +22,16 @@
 
 ## Blogs
 
-- [Blog 1: Type Alias বনাম Interface](./blog1-type-interface.md)
-- [Blog 2: Access Modifiers (public, private, protected, readonly)](./blog-2-access-modifiers.md)
+- [Blog 1: Type Alias বনাম Interface](./type-vs-interface.md)
+- [Blog 2: Access Modifiers (public, private, protected, readonly)](./access-modifiers.md)
 
 ## ফাইল স্ট্রাকচার
 
 ```
 B8-A1/
 ├── solutions.ts              # ৮টি সমস্যার সমাধান
-├── blog1-type-interface.md   # ব্লগ ১: Type Alias বনাম Interface
-├── blog-2-access-modifiers.md# ব্লগ ২: Access Modifiers
+├── type-vs-interface.md      # ব্লগ ১: Type Alias বনাম Interface
+├── access-modifiers.md       # ব্লগ ২: Access Modifiers
 └── README.md                 # এই ফাইল
 ```
 
