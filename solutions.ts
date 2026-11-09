@@ -86,7 +86,7 @@ class Manager extends Employee{
 constructor(name: string, baseSalary: number, private department: string ) {
     super(name, baseSalary);
 }
-    getRoleInfo(){
+    getRoleInfo(): string{
     return `Manager of ${this.department}: ${this.name}`
     }
 }
