@@ -18,13 +18,10 @@ function processInput (value: string | number | boolean) : string | number {
 
 
 
-
 function formatCoordinate ( coordinate : readonly [number, number, string]) : string {
     const  [latitude, longitude, locationName] = coordinate
     return `Location: ${locationName} (${latitude}, ${longitude})`
 }
-
-
 
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
@@ -50,16 +47,9 @@ function getPopularCourses ( courses: Course[], minStudents: number) : Course[] 
 }
 
 
-
-
-
 function pluckValues <T, K extends keyof T>(items: T[], key: K ): T[K][]  {
     return items.map((item: T): T[K] => item[key])
 }
-
-
-
-
 
 
 class Employee {
